@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<doc>
+	<configs>
+		<config application="starcitizen.exe">
+			<pages>
+				<page name="Default">
+					<encoder id="R1" icon="r1">
+						<ccw device="4" button="1"/>
+						<cw device="4" button="2"/>
+						<action device="4" button="3"/>
+					</encoder>
+					<encoder id="R2" icon="r1">
+						<ccw device="4" button="4" duration="800"/>
+						<cw device="4" button="5"/>
+						<action device="4" button="6"/>
+					</encoder>
+					<encoder id="R3" icon="r1">
+						<ccw device="4" button="20"/>
+						<cw device="4" button="21"/>
+						<action device="4" button="22"/>
+					</encoder>
+					<encoder id="R4" icon="r1">
+						<ccw device="4" button="23"/>
+						<cw device="4" button="24"/>
+						<action device="4" button="25"/>
+					</encoder>
+					<encoder id="R5" icon="r1">
+						<ccw device="4" button="26"/>
+						<cw device="4" button="27"/>
+						<action device="4" button="28"/>
+					</encoder>
+					<encoder id="R6" icon="r1">
+						<ccw device="4" button="29"/>
+						<cw device="4" button="30"/>
+						<action device="4" button="31"/>
+					</encoder>
+					<button id="B1" >
+						<action device="4" button="7"/>
+					</button>
+					<touch id="T1">
+						<action device="4" button="8"/>
+					</touch>
+					<touch id="T2">
+						<action device="4" button="9"/>
+					</touch>
+					<touch id="T3">
+						<action device="4" button="10"/>
+					</touch>
+					<touch id="T4">
+						<action device="4" button="11"/>
+					</touch>
+					<touch id="T5">
+						<action device="4" button="12"/>
+					</touch>
+					<touch id="T6">
+						<action device="4" button="13"/>
+					</touch>
+					<touch id="T7">
+						<action device="4" button="14"/>
+					</touch>
+					<touch id="T8">
+						<action device="4" button="15"/>
+					</touch>
+					<touch id="T9">
+						<action device="4" button="16"/>
+					</touch>
+					<touch id="T10">
+						<action device="4" button="17"/>
+					</touch>
+					<touch id="T11">
+						<action device="4" button="18"/>
+					</touch>
+					<touch id="T12">
+						<action device="4" button="19"/>
+					</touch>
+				</page>
+			</pages>
+		</config>
+	</configs>
+</doc>

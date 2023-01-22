@@ -1,0 +1,13 @@
+type: plugin4
+name: Mumi
+displayName: Mumi Tools
+version: 1.0.0.0
+author: EMCS
+copyright: EMCS
+
+supportedDevices:
+    - LoupedeckCt  
+    - LoupedeckLive
+
+pluginFileName: MumiPlugin.dll
+pluginFolderWin: bin\

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<doc>
+	<configs>
+		<config application="starcitizen.exe">
+			<pages>
+				<page name="Default">
+					<encoder id="E1" icon="PluginIcon32x32.png1">
+						<ccw device="4" button="1"/>
+						<cw device="4" button="2"/>
+						<action device="4" button="3"/>
+					</encoder>
+					<encoder id="E2" icon="PluginIcon32x32.png">
+						<ccw device="4" button="4" duration="800"/>
+						<cw device="4" button="5"/>
+						<action device="4" button="6"/>
+					</encoder>
+					<button id ="B8">
+						<action device="4" button="7"/>
+					</button>
+					<touch id ="T1">
+						<action device="4" button="7"/>
+					</touch>
+
+				</page>
+			</pages>
+		</config>
+	</configs>
+</doc>
