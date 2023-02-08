@@ -67,7 +67,7 @@ namespace vJoy.Wrapper
         /// </summary>
         /// <param name="vJoystickId"></param>
         public VirtualJoystick(UInt32 vJoystickId) => this.JoystickId = vJoystickId;
-        
+
         /// <summary>
         /// returns list of deviceId currently defined on the client
         /// </summary>
@@ -143,7 +143,8 @@ namespace vJoy.Wrapper
 
         public void Dispose()
         {
-            if (this.Aquired) this.Joystick?.RelinquishVJD(this.JoystickId);
+            if (this.Aquired)
+                this.Joystick?.RelinquishVJD(this.JoystickId);
         }
 
         /// <summary>
@@ -173,8 +174,10 @@ namespace vJoy.Wrapper
             // Set the new value
             this._state.Buttons = holdValues | buttons;
 
+            this.Joystick.SetBtn(down, this.JoystickId, vButtonNumber);
+
             // Update
-            this.Joystick.UpdateVJD(this.JoystickId, ref this._state);
+            //this.Joystick.UpdateVJD(this.JoystickId, ref this._state);
         }
 
         /// <summary>
@@ -184,6 +187,7 @@ namespace vJoy.Wrapper
         /// <returns>true = button pressed, false = button released</returns>
         public Boolean GetJoystickButton(UInt32 vButtonNumber)
         {
+            
             // Offset by one
             var vButton = vButtonNumber - 1;
 
@@ -452,7 +456,7 @@ namespace muchimi.vjoy
             // map of device id to the map of button timers data
             this.Map = new Dictionary<UInt32, PulseTimers>();
             this.VJoy = vjoy;
-            
+
         }
 
 
@@ -480,13 +484,13 @@ namespace muchimi.vjoy
 
 
 
-        public void Pulse( UInt32 deviceId, UInt32 buttonId, UInt32 duration = 1000)
+        public void Pulse(UInt32 deviceId, UInt32 buttonId, UInt32 duration = 1000)
         {
             var data = this.GetButtonData(deviceId, buttonId);
             var timer = data.Timer;
 
             timer.Stop();
-            
+
             if (data.Handler != null)
             {
                 timer.Elapsed -= data.Handler;
@@ -583,7 +587,7 @@ namespace muchimi.vjoy
             {
                 joy.SetJoystickButton(true, button);
                 joy.Release();
-                
+
             }
 
 
@@ -652,7 +656,7 @@ namespace muchimi.vjoy
         }
 
 
-        public enum HatPositionEnum 
+        public enum HatPositionEnum
         {
             Center,
             Top,
@@ -684,13 +688,13 @@ namespace muchimi.vjoy
             {
                 case HatPositionEnum.Center: // (0,0)
                     return -1;
-                    
+
                 case HatPositionEnum.Top:
                     return 9000;
-                    
+
                 case HatPositionEnum.TopRight:
                     return 4500;
-                    
+
                 case HatPositionEnum.Right:
                     return 9000;
                 case HatPositionEnum.BottomRight:
